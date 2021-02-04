@@ -1,0 +1,61 @@
+.page-container
+  display block
+  padding 0 0 16px 32px
+
+  &-header
+  &-navigation
+    display inline-block
+    vertical-align middle
+    width 100%
+
+  &-header
+    max-width $factual-left-col-width
+    margin-right: 'calc(%s - %s)' % ($nominal-left-col-width $factual-left-col-width)
+
+  &-navigation
+    max-width 'calc(100% - %s)' % $nominal-left-col-width
+    box-shadow 0 5px 25px 0 alpha($black-1, .1)
+
+  &-navigation-list
+    background-color $gray-1
+
+    &item
+      float left
+
+      &__link
+        display block
+        color $white
+        text-align center
+        padding 16px
+
+      &:hover
+        background-color $gray-3
+        transition-duration 1s
+        transition-timing-function ease-out
+
+  &-body
+    display block
+
+    &-header
+      display inline-block
+      width 100%
+      max-width $factual-left-col-width
+      margin 0
+      margin-right: 'calc(%s - %s)' % ($nominal-left-col-width $factual-left-col-width)
+      text-align justify
+
+      &__text
+        font-size 20px
+
+    &__content
+      display inline-block
+      vertical-align: top;
+      min-width 720px
+      max-width 'calc(100% - %s)' % $nominal-left-col-width
+
+.calendar-block-layout
+  padding: 24px;
+  margin auto
+  background-color $white
+  border-radius 25px
+  box-shadow 0 5px 25px 0 alpha($black-1, .1)

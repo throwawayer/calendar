@@ -1,0 +1,38 @@
+{
+  "parser": "@babel/eslint-parser",
+  "extends": ["airbnb", "airbnb/hooks"],
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "ecmaFeatures": { "jsx": true, "globalReturn": false },
+    "sourceType": "module",
+    "project": "./jsconfig.json",
+    "allowImportExportEverywhere": false
+  },
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "plugins": ["react-hooks"],
+  "rules": {
+    "no-param-reassign": [
+      "error",
+      { "props": true, "ignorePropertyModificationsFor": ["state"] }
+    ],
+    "react/jsx-props-no-spreading": [
+      "error",
+      {
+        "custom": "ignore",
+        "exceptions": ["button"]
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx"],
+        "paths": ["src"]
+      },
+      "babel-module": {}
+    }
+  }
+}
