@@ -7,7 +7,7 @@ const { paths } = require('./vars');
 
 const plugins = [
   new HtmlWebpackPlugin({
-    template: path.resolve('src', 'index.html'),
+    template: path.resolve('index.html'),
     favicon: path.resolve('src', 'assets', 'images', 'favicon.ico'),
   }),
 ];
